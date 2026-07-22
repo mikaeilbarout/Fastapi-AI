@@ -1,0 +1,26 @@
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: fastapi-ai-redis
+    ports:
+      - "16379:6379"
+    volumes:
+      - redis-data:/data
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: fastapi-ai-postgres
+    environment:
+      POSTGRES_USER: fastapi_ai
+      POSTGRES_PASSWORD: fastapi_ai
+      POSTGRES_DB: fastapi_ai
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  redis-data:
+  postgres-data:

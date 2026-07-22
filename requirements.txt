@@ -1,0 +1,17 @@
+fastapi #API framework
+uvicorn  #Web server runtime
+pydantic   #For data validation
+google-genai   #AI client
+aiosqlite  #Async SQLite support (used by the test suite)
+asyncpg  #Async PostgreSQL driver (used by dev/prod)
+sqlalchemy  #ORM for database interactions
+pydantic[email]  #For email validation
+email-validator
+bcrypt  #For password hashing
+python-jose[cryptography]
+pydantic_settings   
+jinja2
+openai
+redis  #Chat history store
+pytest  #Testing framework
+pytest-asyncio  #Run async test functions
